@@ -1,0 +1,22 @@
+#!/bin/bash
+# Autor: Gustavo Aires Cavalcanti Moreira
+# Data de criação: 22/03/2017
+# Modificação: 16:32
+##################################################
+
+n2=0
+clear 
+echo "digite quantas variaveis vc ira pegar" 
+read VAR
+
+while (( $VAR >= 1 )); do
+	echo "digite um numero"
+	read n1
+	if (( $n1 > $n2 )); then
+		n2=$n1
+	fi
+	let VAR=($VAR-1)	
+done
+echo "o maior eh $n2"
+echo "prescione [enter] para sair"
+read asdf 
