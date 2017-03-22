@@ -1,0 +1,25 @@
+#!/bin/bash
+# Autor: Gustavo Aires Cavalcanti Moreira
+# Data de Criação: 16:24
+# Modificação: 16:24
+#############################
+
+clear
+echo " escolha um numero"	
+	read maior
+	echo "outro numero"	
+	read menor
+
+if (( $maior < $menor )); then
+	temp=$maior
+	maior=$menor
+	menor=$temp
+fi
+
+while (( $menor <= $maior )); do
+	if (( $menor%2 != 0 )); then
+		echo -n " $menor"
+	fi
+	let menor=($menor+1)
+
+done
