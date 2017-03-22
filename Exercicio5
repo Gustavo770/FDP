@@ -1,0 +1,36 @@
+#!/bin/bash
+# Autor: GustavoAires Cavalcanti Moreira
+# Data de criação: 22/03/2017
+# Modificação: 15:49
+##############################################################
+
+clear
+maior=1
+inter=1
+menor=1
+var=1
+
+while (( $var != 0 )); do
+	echo "digite um salario
+		read var
+
+	if (( $var > $menor )); then
+		if (( $var > $inter )); then
+			if (( $var > $maior )); then
+				maior=$var
+			fi
+		
+		else
+			inter=$var
+		
+		fi
+	
+	else
+		menor=$var		
+	fi 
+
+do
+
+echo "os tres maiores salarios sao $menor $inter $maior
+echo "prescione [ENTER] para sair" 
+read xxx
