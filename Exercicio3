@@ -1,0 +1,28 @@
+#!/bin/bash
+# Autor: Gustavo Aires Cavalcanti Moreira
+# Data de Criação: 22/03/2017
+# Modificação: 16:26
+echo "instrucoes do programa"
+echo "digite 0 para sair"
+echo "digite o valor o salario que o SR. ira querer"
+echo "Salarios com um valor maior que R$ 500,00 terao um almento de 20%"
+echo "Os salarios que terem um valor abaixo de R$ 500,00 terao um almento de 10%"
+sleep 9
+clear
+var=1
+
+while (( $var != 0 )); do
+	echo "digite o valor do salario"
+	read var
+	if (( $var >= 500 )); then
+		temp=$var
+		let var=($var*20/100)
+		let temp=($temp+$var)
+		echo "o salario almentou para R$ $temp,00"
+	else
+			temp=$var
+		let var=($var*10/100)
+		let temp=($temp+$var)
+		echo "o salario almentou para R$ $temp,00"
+	fi
+done//
